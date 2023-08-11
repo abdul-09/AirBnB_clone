@@ -1,4 +1,5 @@
-Project completed for ALX Software Engineering School. 
+Project completed for ALX Software Engineering School.
+![Uploading image.png…]()
 
 AirBnB clone - The console
 The goal of the project is to deploy on a server a simple copy of the AirBnB website. It won’t implement all the features, only some of them to cover all fundamental concepts of the higher level programming track.
