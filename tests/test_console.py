@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ defines unittest for console.py """
-import sys
 import os
+import sys
 import unittest
 from models import storage
 from models.engine.file_storage import FileStorage
