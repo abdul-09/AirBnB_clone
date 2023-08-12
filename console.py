@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""define Hbnb console"""
 
 
 
@@ -15,24 +15,7 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 
-
-class HBNBCommand(cmd.cmd):
-    """
-    custom console class
-
-    """
-    prompt =  " (hbnb) "
-
-    __classes = {
-        "Basemodel",
-        "User",
-        "State",
-        "City",
-        "Place",
-        "Amenity",
-        "Review",
-    } 
-    def  parse(arg):
+def  parse(arg):
         c_braces = re.search(r"\{(.* ?)\}", arg)
         brackets = re.search(r"\[(.*?)\]", arg)
         if c_braces is None:
@@ -48,6 +31,23 @@ class HBNBCommand(cmd.cmd):
             retline = [i.strip(",") for i in lexer]
             retline.append(c_braces.group())
             return retline
+        
+class HBNBCommand(cmd.cmd):
+    """
+    custom console class
+
+    """
+    prompt =  " (hbnb) "
+
+    __classes = {
+        "Basemodel",
+        "User",
+        "State",
+        "City",
+        "Place",
+        "Amenity",
+        "Review",
+    }
         
     def empty_line(self):
         """do nothing after receiving an empty line"""
