@@ -170,20 +170,20 @@ class HBNBCommand(cmd.cmd):
                 obj.__dict__[argline[2]] = argline[3]
         elif type(eval(arg[2])) == dict:
             obj = objdict["{}.{}".format(argline[0], argline[1])]
-            for k, v in eval(argline[2].items()):
-                if (k in obj.__class__.__dict__.keys() and
-                       type(obj.__class__.__dict__[k] in {str, int, float})):
-                    valuetype = type(obj.__class__.__dict__[k])
-                    obj.__dict__[k] = valuetype(v)
+            for key, value in eval(argline[2].items()):
+                if (key in obj.__class__.__dict__.keys() and
+                       type(obj.__class__.__dict__[key] in {str, int, float})):
+                    valuetype = type(obj.__class__.__dict__[key])
+                    obj.__dict__[key] = valuetype(value)
                 else:
-                    obj.__dict__[k] = v
+                    obj.__dict__[key] = value
             storage.save()          
     
     def do_count(self, arg):
         """
         retrive number of instances of a class
         """
-        argline = parser(arg)
+        argline = parse(arg)
         count = 0
         for obj in storage.all().values():
             if argline[0] == obj.__class__.__name__:
