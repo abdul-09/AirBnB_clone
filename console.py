@@ -2,7 +2,6 @@
 """define Hbnb console"""
 
 
-
 import cmd
 import re
 from shlex import split
@@ -68,10 +67,10 @@ class HBNBCommand(cmd.cmd):
             argline = [arg [:match.span()[0]], arg[match.span()[1]:]]
             match = re.search(r"\((.*?)\)", argline[1])
             if match is not None:
-                cmd = [argline[1][:match.span()[0]], match.group()[1:-1]]
-                if cmd[0] in argdict.keys():
-                    call = "{} {}".format(argline[0], cmd[1])
-                    return argdict[cmd[0]](call)
+                command = [argline[1][:match.span()[0]], match.group()[1:-1]]
+                if command[0] in argdict.keys():
+                    call = "{} {}".format(argline[0], command[1])
+                    return argdict[command[0]](call)
                 
         print("*** unknown syntax: {}".format(arg))
         return False

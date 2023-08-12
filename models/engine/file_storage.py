@@ -38,7 +38,7 @@ class FileStorage:
             obj: The object to be added.
         """
         class_name = obj.__class__.__name__
-        self.__objects[f"{class_name}.{obj.id}"] = obj
+        self.__objects["{}.{}".format(class_name,obj.id)] = obj
 
     def save(self):
         """
