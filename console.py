@@ -31,7 +31,7 @@ def  parse(arg):
             retline.append(c_braces.group())
             return retline
         
-class HBNBCommand(cmd.cmd):
+class HBNBCommand(cmd.Cmd):
     """
     custom console class
 
