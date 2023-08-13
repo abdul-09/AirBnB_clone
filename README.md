@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-to be updated
-=======
 Project completed for ALX Software Engineering School.
 ![image](https://github.com/abdul-09/AirBnB_clone/assets/125592181/528c3a57-b9d1-4d8e-b58b-47214b1b0eaa)
 
