@@ -31,7 +31,11 @@ def  parse(arg):
             retline.append(c_braces.group())
             return retline
         
+<<<<<<< HEAD
 class HBNBCommand(cmd.Cmd):
+=======
+class HBNBCommand(cmd.cmd):
+>>>>>>> ebfedff2df1dd68cc89a9e4dd908e7e01560fdf9
     """
     custom console class
 
